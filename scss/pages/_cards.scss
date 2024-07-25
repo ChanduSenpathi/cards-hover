@@ -1,0 +1,25 @@
+
+.main_container {
+    @include mainAlignment;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+.card {
+    @include articleAlignment;
+    background-color: lightgray;
+    padding: $padding_20;
+    width: $card_width;
+    min-height: $card_height;
+    margin: $margin_10;
+    border-radius: $border_radius_10;
+    &__image {
+        width: $width_100percent;
+        height: $height_100percent;
+        border-radius: $border_radius_10;
+        transition: transform .5s linear;
+        object-fit: fill;
+    }
+    &:hover &__image {
+        transform: translateY(-50px) ;
+    }
+}
